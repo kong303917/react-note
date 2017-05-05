@@ -3,11 +3,15 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 import CommentApp from '../containers/CommentApp'
 import About from '../containers/About'
+import MenuBar from '../components/MenuBar'
 
 class roots extends Component {
     render() {
         return (
-            <div>{this.props.children}</div>
+            <div>
+                <MenuBar></MenuBar>
+                {this.props.children}
+            </div>
         )
     }
 }
