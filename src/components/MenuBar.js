@@ -16,7 +16,7 @@ export default class MenuBar extends Component {
 
     render() {
         return (
-            <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+            <Menu onClick={this.handleClick.bind(this)} selectedKeys={[this.state.current]} mode="horizontal">
                 <Menu.Item key="first">
                     <Link to="/" activeStyle={{color:'red'}}>Home</Link>
                 </Menu.Item>
